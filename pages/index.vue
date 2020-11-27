@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="bg-image h-screen bg-cover">
-      <div class="pt-24 text-center uppercase">
+      <div class="pt-16 text-center uppercase">
+        <div class="text-2xl text-white pb-8">Build the perfect day out!</div>
+
         <div class="text-3xl text-white -mb-2">Set your budget</div>
         <div class="font-hand text-3xl text-white">Let the button decide</div>
         <div class="mt-8">
@@ -11,9 +13,9 @@
           <div class="mx-auto w-56">
             <vue-slider
               v-model="price"
-              :min="100"
-              :max="1000"
-              :interval="25"
+              :min="50"
+              :max="350"
+              :interval="10"
               :dot-style="{
                 border: 'none',
               }"
@@ -25,7 +27,7 @@
           </div>
         </div>
         <nuxt-link
-          to="/search"
+          :to="{ path: 'search', query: { budget: price } }"
           class="rounded-full bg-red-400 h-24 w-24 flex items-center justify-center font-hand text-white text-3xl mx-auto mt-8"
         >
           Go
@@ -45,7 +47,7 @@ export default {
   },
   data() {
     return {
-      price: 350,
+      price: 250,
     }
   },
 }
