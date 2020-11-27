@@ -2,7 +2,9 @@
   <div class="container">
     <div class="bg-image h-screen bg-cover">
       <div class="pt-16 text-center uppercase">
-        <div class="text-2xl text-white pb-8">Build the perfect day out!</div>
+        <div class="text-3xl text-white pb-8 font-hand">
+          Build the perfect day out!
+        </div>
 
         <div class="text-3xl text-white -mb-2">Set your budget</div>
         <div class="font-hand text-3xl text-white">Let the button decide</div>
@@ -47,7 +49,7 @@ export default {
   },
   data() {
     return {
-      price: 250,
+      price: 200,
     }
   },
 }
