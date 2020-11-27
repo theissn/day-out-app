@@ -24,11 +24,12 @@
             ></vue-slider>
           </div>
         </div>
-        <div
+        <nuxt-link
+          to="/search"
           class="rounded-full bg-red-400 h-24 w-24 flex items-center justify-center font-hand text-white text-3xl mx-auto mt-8"
         >
           Go
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
