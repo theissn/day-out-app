@@ -47,7 +47,7 @@ const getActivity = async (budget) => {
         
         return {
             title: $(el.children).find('h3.card__title').text().trim(),
-            image: photos[0].sizes.original?.path || "https://images.unsplash.com/photo-1551524164-7d2f9ff12c70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80",
+            image: photos[0].sizes.original.path,
             price,
             cost: price === 'Free' ? 0 : parseFloat(price),
             link: $(el.children).find('a[title="Tell Me More"]').attr('href'),
