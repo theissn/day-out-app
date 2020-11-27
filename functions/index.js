@@ -70,7 +70,7 @@ const getShow = async (budget) => {
     return getRandomElFromArray(shows.filter(sh => parseFloat(sh.offers.lowPrice) <= budget));
 }
 
-const getRandomElFromArray = (array) => {
+function getRandomElFromArray (array) {
     return array[Math.floor(Math.random() * array.length - 1)];
 }
   

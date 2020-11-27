@@ -60,7 +60,7 @@
 export default {
   asyncData({ $axios, route }) {
     return $axios
-      .get(`http://localhost:8888/api/index?budget=${route.query.budget}`)
+      .get(`/api/index?budget=${route.query.budget}`)
       .then((res) => res.data)
   },
   computed: {
