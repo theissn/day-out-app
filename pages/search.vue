@@ -59,10 +59,10 @@
 <script>
 export default {
   asyncData({ $axios, route, isDev }) {
-    console.log('here')
     const url = isDev
       ? 'http://localhost:8888'
       : 'https://day-out-app.netlify.app'
+
     return $axios
       .get(`${url}/api/index?budget=${route.query.budget}`)
       .then((res) => res.data)

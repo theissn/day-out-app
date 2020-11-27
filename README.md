@@ -1,5 +1,7 @@
 # day-out-app
 
+Demo: [my directory](test_dir)
+
 ## Build Setup
 
 ```bash
