@@ -1,6 +1,6 @@
 # day-out-app
 
-Demo: [my directory](test_dir)
+Demo: [Video](https://github.com/theissn/day-out-app/blob/master/demo.mov?raw=true)
 
 ## Build Setup
 
