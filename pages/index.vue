@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="max-w-lg mx-auto">
     <div class="bg-image h-screen bg-cover">
       <div class="pt-16 text-center uppercase">
         <div class="text-3xl text-white pb-8 font-hand">

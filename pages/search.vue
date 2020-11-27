@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen">
+  <div class="flex flex-col h-screen max-w-lg mx-auto">
     <div
       class="bg-1 flex-1 bg-cover relative"
       :style="{ backgroundImage: `url(${activity.image})` }"
@@ -58,11 +58,13 @@
 
 <script>
 export default {
-  asyncData({ $axios, route }) {
+  asyncData({ $axios, route, isDev }) {
+    console.log('here')
+    const url = isDev
+      ? 'http://localhost:8888'
+      : 'https://day-out-app.netlify.app'
     return $axios
-      .get(
-        `https://day-out-app.netlify.app/api/index?budget=${route.query.budget}`
-      )
+      .get(`${url}/api/index?budget=${route.query.budget}`)
       .then((res) => res.data)
   },
   computed: {
