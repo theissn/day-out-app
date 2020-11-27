@@ -60,7 +60,9 @@
 export default {
   asyncData({ $axios, route }) {
     return $axios
-      .get(`/api/index?budget=${route.query.budget}`)
+      .get(
+        `https://day-out-app.netlify.app/api/index?budget=${route.query.budget}`
+      )
       .then((res) => res.data)
   },
   computed: {
