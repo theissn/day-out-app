@@ -1,68 +1,57 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">day-out-app</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
+    <div class="bg-image h-screen bg-cover">
+      <div class="pt-24 text-center uppercase">
+        <div class="text-3xl text-white -mb-2">Set your budget</div>
+        <div class="font-hand text-3xl text-white">Let the button decide</div>
+        <div class="mt-8">
+          <div class="text-center text-xl font-light text-white font-money">
+            £ {{ price }}
+          </div>
+          <div class="mx-auto w-56">
+            <vue-slider
+              :min="100"
+              :max="1000"
+              :interval="25"
+              :dotStyle="{
+                border: 'none',
+              }"
+              :processStyle="{
+                backgroundColor: 'rgba(252, 129, 129, var(--bg-opacity))',
+              }"
+              v-model="price"
+              tooltip="none"
+            ></vue-slider>
+          </div>
+        </div>
+        <div
+          class="rounded-full bg-red-400 h-24 w-24 flex items-center justify-center font-hand text-white text-3xl mx-auto mt-8"
         >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+          Go
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import VueSlider from 'vue-slider-component'
+import 'vue-slider-component/theme/antd.css'
+
+export default {
+  components: {
+    VueSlider,
+  },
+  data() {
+    return {
+      price: 350,
+    }
+  },
+}
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style scoped>
+.bg-image {
+  background-image: url('https://images.unsplash.com/photo-1531012451721-432c0ae74527?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80');
 }
 </style>
