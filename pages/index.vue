@@ -10,16 +10,16 @@
           </div>
           <div class="mx-auto w-56">
             <vue-slider
+              v-model="price"
               :min="100"
               :max="1000"
               :interval="25"
-              :dotStyle="{
+              :dot-style="{
                 border: 'none',
               }"
-              :processStyle="{
+              :process-style="{
                 backgroundColor: 'rgba(252, 129, 129, var(--bg-opacity))',
               }"
-              v-model="price"
               tooltip="none"
             ></vue-slider>
           </div>
